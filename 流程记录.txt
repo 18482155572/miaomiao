@@ -1,0 +1,11 @@
+Vue-cli
+1、【搭建脚手架】 npm i vue-cli
+2、【初始化webpack】 vue init webpack
+3、【初始化git】git init
+
+Github
+1、登录Github,点击右上角+号，创建一个新项目（New repository）
+2、在包含.git的文件下右键选中Git Bash Here
+3、在打开的命令行内输入 git remote add origin git@github.com:18482155572/miaomiao.git
+注：git@github.com:18482155572/miaomiao.git 取自于github创建项目后提供的ssh，也可以
+选择http，但是这样就需要每次都登录
