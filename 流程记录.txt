@@ -9,3 +9,13 @@ Github
 3、在打开的命令行内输入 git remote add origin git@github.com:18482155572/miaomiao.git
 注：git@github.com:18482155572/miaomiao.git 取自于github创建项目后提供的ssh，也可以
 选择http，但是这样就需要每次都登录
+4、绑定秘钥，填入账号和邮箱地址
+    提交流程：
+        1、git add "文件名"  --all(提交所有文件)
+        2、git commit -m "must english or number"
+        3、git push origin master
+5、创建开发分支
+    1、git checkout -b dev
+    2、git push origin dev
+    再创建一个分支
+    3、git checkout -b createComponents

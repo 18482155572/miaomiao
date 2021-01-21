@@ -3,13 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './stores'
 
-Vue.config.productionTip = false
+import './public/css/common.css'
+import './public/css/iconfont/iconfont.css'
+import './public/libs/swiper-4.1.0.min.css'
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  store,
+  render:h=>h(App),
+}).$mount('#app')
+
