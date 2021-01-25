@@ -13,7 +13,7 @@ Github
     提交流程：
         1、git add "文件名"  --all(提交所有文件)
         2、git commit -m "must english or number"
-        3、git push origin master
+        3、git push origin master / dev  (取决于更新哪个分支)
 5、创建开发分支
     1、git checkout -b dev
     2、git push origin dev

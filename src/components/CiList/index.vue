@@ -1,5 +1,7 @@
 <template>
-  <div class="cinema_body">
+  <div class="cinema_body" >
+    <Loading v-if="isLoading"/>
+    <scroller v-else>
     <ul>
       <li v-for="item in cityList" :key="item.id">
         <div>
@@ -24,6 +26,7 @@
         </div>
       </li>
     </ul>
+    </scroller>
   </div>
 </template>
 
@@ -33,11 +36,13 @@ export default {
   name: "City",
   data() {
     return {
-      cityList: []
+      cityList: [],
+      isLoading : true
     };
   },
   mounted() {
     this.cityList = CiList.cinemas;
+    this.isLoading = false
   },
   filters: {
     formatCard(key) {

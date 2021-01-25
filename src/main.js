@@ -9,6 +9,9 @@ import './public/css/common.css'
 import './public/css/iconfont/iconfont.css'
 import './public/libs/swiper-4.1.0.min.css'
 
+
+
+
 new Vue({
     router,
     store,
@@ -18,3 +21,8 @@ new Vue({
 Vue.filter('setWH', (url, arg) => {
     return url.replace(/w\.h/, arg)
 })
+
+import Scroller from "@/components/scroller";
+Vue.component('Scroller',Scroller)
+import Loading from "@/components/Loading"
+Vue.component('Loading',Loading)
