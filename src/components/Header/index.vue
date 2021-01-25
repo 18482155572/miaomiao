@@ -1,6 +1,10 @@
 <template>
   <header id="header">
-    <h1>{{title}}</h1>
+    <h1> 
+      <img src="@/assets/miaomiao.png" alt="" class="mmimg">
+      {{title}}
+    </h1>
+   
   </header>
 </template>
 
@@ -17,6 +21,12 @@ export default {
 </script>
 
 <style scoped>
+.mmimg{
+  width: 30px;
+  position:absolute;
+  top: 7px;
+  left: 5px;
+}
 #header {
   width: 100%;
   height: 50px;

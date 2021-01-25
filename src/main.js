@@ -10,8 +10,11 @@ import './public/css/iconfont/iconfont.css'
 import './public/libs/swiper-4.1.0.min.css'
 
 new Vue({
-  router,
-  store,
-  render:h=>h(App),
+    router,
+    store,
+    render: h => h(App),
 }).$mount('#app')
 
+Vue.filter('setWH', (url, arg) => {
+    return url.replace(/w\.h/, arg)
+})

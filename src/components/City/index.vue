@@ -6,86 +6,49 @@
         <ul class="clearfix">
           <li>上海</li>
           <li>北京</li>
-          <li>上海</li>
-          <li>北京</li>
-          <li>上海</li>
-          <li>北京</li>
-          <li>上海</li>
-          <li>北京</li>
+          <li>成都</li>
+          <li>重庆</li>
+          <li>武汉</li>
+          <li>西安</li>
+          <li>厦门</li>
+          <li>深圳</li>
         </ul>
       </div>
-      <div class="city_sort">
-        <div>
-          <h2>A</h2>
+      <div class="city_sort" ref="city_sort">
+        <div v-for="item in cityList" :key="item.title">
+          <h2>{{item.title}}</h2>
           <ul>
-            <li>阿拉善盟</li>
-            <li>鞍山</li>
-            <li>安庆</li>
-            <li>安阳</li>
-          </ul>
-        </div>
-        <div>
-          <h2>B</h2>
-          <ul>
-            <li>北京</li>
-            <li>保定</li>
-            <li>蚌埠</li>
-            <li>包头</li>
-          </ul>
-        </div>
-        <div>
-          <h2>A</h2>
-          <ul>
-            <li>阿拉善盟</li>
-            <li>鞍山</li>
-            <li>安庆</li>
-            <li>安阳</li>
-          </ul>
-        </div>
-        <div>
-          <h2>B</h2>
-          <ul>
-            <li>北京</li>
-            <li>保定</li>
-            <li>蚌埠</li>
-            <li>包头</li>
-          </ul>
-        </div>
-        <div>
-          <h2>A</h2>
-          <ul>
-            <li>阿拉善盟</li>
-            <li>鞍山</li>
-            <li>安庆</li>
-            <li>安阳</li>
-          </ul>
-        </div>
-        <div>
-          <h2>B</h2>
-          <ul>
-            <li>北京</li>
-            <li>保定</li>
-            <li>蚌埠</li>
-            <li>包头</li>
+            <li v-for="item in item.lists" :key="item.id">{{item}}</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="city_index">
-      <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
+      <ul v-for="(item,index) in cityList" :key="item.title" @touchstart="handleToIndex(index)">
+        <li>{{item.title}}</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+import city from "./city.json";
 export default {
   name: "City",
+  data() {
+    return {
+      cityList: []
+    };
+  },
+  mounted() {
+    this.cityList = city.city;
+  },
+  methods:{
+    handleToIndex(index){
+      var h2 = this.$refs.city_sort.getElementsByTagName('h2')
+      this.$refs.city_sort.parentNode.scrollTop = h2[index].offsetTop 
+    }
+  }
 };
 </script>
 

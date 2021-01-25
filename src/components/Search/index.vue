@@ -18,15 +18,6 @@
             <p>2018-11-16</p>
           </div>
         </li>
-        <li>
-          <div class="img"><img src="@/public/images/movie_1.jpg" /></div>
-          <div class="info">
-            <p><span>无名之辈</span><span>8.5</span></p>
-            <p>A Cool Fish</p>
-            <p>剧情,喜剧,犯罪</p>
-            <p>2018-11-16</p>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
