@@ -5,7 +5,7 @@
       <ul>
         <li class="pulldown">{{ pullDownMsg }}</li>
         <li v-for="item in nowPlaying" :key="item.id">
-          <div class="pic_show" @tap="handleToDetail">
+          <div class="pic_show" @tap="handleToDetail(item.id)">
             <img :src="item.img | setWH('128.180')" />
           </div>
           <div class="info_list">
@@ -20,7 +20,7 @@
               alt=""
               style="width:25px"
             />
-            <h2>{{ item.nm }}</h2>
+            <h2 @tap="handleToDetail(item.id)">{{ item.nm }}</h2>
             <p>
               观众评 <span class="grade">{{ item.sc }}</span>
             </p>
@@ -96,8 +96,8 @@ export default {
     // },20)
   },
   methods: {
-    handleToDetail() {
-      console.log("handleToDetai");
+    handleToDetail(movieId) {
+      this.$router.push('/movie/detail/1/'+movieId)
     },
     handleToScroll(pos) {
       this.pullDownMsg = "正在更新中";

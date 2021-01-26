@@ -10,8 +10,6 @@ import './public/css/iconfont/iconfont.css'
 import './public/libs/swiper-4.1.0.min.css'
 
 
-
-
 new Vue({
     router,
     store,
