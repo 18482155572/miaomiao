@@ -1,5 +1,6 @@
 <template>
   <header id="header">
+    <slot></slot>
     <h1> 
       <img src="@/assets/miaomiao.png" alt="" class="mmimg">
       {{title}}
@@ -24,8 +25,8 @@ export default {
 .mmimg{
   width: 30px;
   position:absolute;
-  top: 7px;
-  left: 5px;
+  top: 10px;
+  right: 5px;
 }
 #header {
   width: 100%;
